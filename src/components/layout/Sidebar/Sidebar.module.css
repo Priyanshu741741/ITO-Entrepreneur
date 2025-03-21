@@ -1,0 +1,154 @@
+/* src/components/layout/Sidebar/Sidebar.module.css */
+/* src/components/layout/Sidebar/Sidebar.module.css */
+.sidebar {
+    width: 250px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    position: fixed;
+    top: 80px; /* Updated to match new header height */
+    left: 0;
+    height: calc(100vh - 80px); /* Updated to match new header height */
+    overflow-y: auto;
+    z-index: 10;
+    display: none;
+  }
+  
+  /* ... rest of the CSS remains the same ... */
+  
+  .sidebarHeader {
+    padding: 1rem;
+    border-bottom: 1px solid var(--color-primary-light);
+  }
+  
+  .headerContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .title {
+    font-weight: 700;
+    font-size: 1.125rem;
+  }
+  
+  .badge {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    font-size: 0.75rem;
+    padding: 0.125rem 0.5rem;
+    border-radius: 9999px;
+    font-weight: 600;
+  }
+  
+  .sidebarContent {
+    padding: 1rem;
+  }
+  
+  .searchContainer {
+    position: relative;
+    margin-bottom: 1rem;
+  }
+  
+  .searchIcon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-gray-300);
+    font-size: 0.875rem;
+  }
+  
+  .searchInput {
+    width: 100%;
+    background-color: var(--color-primary-light);
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem 0.5rem 2.25rem;
+    color: var(--color-white);
+    font-size: 0.875rem;
+  }
+  
+  .searchInput::placeholder {
+    color: var(--color-gray-300);
+  }
+  
+  .searchInput:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+  }
+  
+  .mainNav {
+    margin-bottom: 2rem;
+  }
+  
+  .navList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .navItem {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 4px;
+    color: var(--color-gray-200);
+    transition: background-color 0.2s ease;
+  }
+  
+  .navItem:hover {
+    background-color: var(--color-primary-light);
+    color: var(--color-white);
+  }
+  
+  .activeNavItem {
+    background-color: var(--color-primary-light);
+    color: var(--color-white);
+  }
+  
+  .navIcon {
+    margin-right: 0.75rem;
+  }
+  
+  .channelsContainer {
+    margin-top: 1.5rem;
+  }
+  
+  .channelsTitle {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--color-gray-300);
+    font-size: 0.875rem;
+  }
+  
+  .channelsList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .channelItem {
+    display: flex;
+    align-items: center;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    color: var(--color-gray-300);
+    font-size: 0.875rem;
+    transition: background-color 0.2s ease;
+  }
+  
+  .channelItem:hover {
+    background-color: var(--color-primary-light);
+    color: var(--color-white);
+  }
+  
+  .channelHash {
+    margin-right: 0.5rem;
+    color: var(--color-gray-400);
+  }
+  
+  @media (min-width: 768px) {
+    .sidebar {
+      display: block;
+    }
+  }

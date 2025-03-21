@@ -1,0 +1,261 @@
+/* src/components/sections/Hero/Hero.module.css */
+.hero {
+    background-color: var(--color-white);
+    padding: 5rem 1rem;
+    margin-top: 80px; /* Match header height */
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .heroContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .heroTextContent {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .title {
+    font-family: var(--font-headline);
+    font-size: 2.75rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    color: var(--color-text-dark);
+    letter-spacing: 1px;
+  }
+  
+  .highlight {
+    color: var(--color-primary);
+  }
+  
+  .tagline {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--color-gray-600);
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .subtitle {
+    font-size: 1.25rem;
+    color: var(--color-gray-700);
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .buttonGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .findMentorButton {
+    padding: 0.85rem 2.5rem;
+    background-color: var(--color-primary);
+    border-radius: 4px;
+    color: var(--color-white);
+    font-weight: 700;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+    font-family: var(--font-body);
+  }
+  
+  .findMentorButton:hover {
+    background-color: var(--color-primary-light);
+  }
+  
+  .getStartedButton {
+    padding: 0.85rem 2.5rem;
+    border: 1px solid var(--color-primary);
+    background-color: var(--color-white);
+    border-radius: 4px;
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.2s;
+    font-family: var(--font-body);
+  }
+  
+  .getStartedButton:hover {
+    background-color: var(--color-gray-100);
+  }
+  
+  .subtext {
+    color: var(--color-gray-600);
+    font-family: var(--font-body);
+    font-size: 1rem;
+  }
+  
+  .heroImageContainer {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 2rem;
+  }
+  
+  .animatedImagePlaceholder {
+    width: 100%;
+    height: 300px;
+    background-color: var(--color-gray-200);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .placeholderText {
+    color: var(--color-gray-600);
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+  
+  @media (min-width: 992px) {
+    .heroContent {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+    }
+    
+    .heroTextContent {
+      text-align: left;
+      flex: 1;
+      margin-bottom: 0;
+    }
+    
+    .heroImageContainer {
+      flex: 1;
+      margin-top: 0;
+    }
+    
+    .title {
+      font-size: 3.5rem;
+    }
+    
+    .subtitle {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    
+    .tagline {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    
+    .buttonGroup {
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+  }
+
+/* Interactive Map Section Styles */
+.mapSection {
+  background-color: var(--color-gray-100);
+  padding: 5rem 1rem;
+}
+
+.mapSectionHeading {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.mapSectionHeading h2 {
+  font-family: var(--font-headline);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--color-text-dark);
+}
+
+.mapSectionHeading p {
+  font-size: 1.2rem;
+  color: var(--color-gray-700);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.mapContainer {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.interactiveMap {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.mapImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.mapHotspot {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 5px rgba(99, 102, 241, 0.3);
+  cursor: pointer;
+}
+
+.hotspotLabel {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-text-dark);
+  color: white;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+.hotspotUSA {
+  top: 35%;
+  left: 20%;
+}
+
+.hotspotEurope {
+  top: 30%;
+  left: 45%;
+}
+
+.hotspotAsia {
+  top: 40%;
+  left: 70%;
+}
+
+@media (min-width: 992px) {
+  .mapSectionHeading h2 {
+    font-size: 3rem;
+  }
+  
+  .mapSectionHeading p {
+    font-size: 1.3rem;
+  }
+  
+  .mapHotspot {
+    width: 40px;
+    height: 40px;
+  }
+}

@@ -1,0 +1,27 @@
+/* src/components/layout/Layout/Layout.module.css */
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .content {
+    display: flex;
+    flex-grow: 1;
+    margin-top: 80px; /* Match header height */
+  }
+  
+  .main {
+    flex-grow: 1;
+    width: 100%;
+  }
+  
+  .withSidebar {
+    margin-left: 0;
+  }
+  
+  @media (min-width: 768px) {
+    .withSidebar {
+      margin-left: 250px;
+    }
+  }

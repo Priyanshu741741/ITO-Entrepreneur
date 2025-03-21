@@ -1,0 +1,71 @@
+/* src/assets/styles/global.css */
+
+:root {
+    /* Colors */
+    --color-primary: #611f69;
+    --color-primary-light: #7c3085;
+    --color-accent: #36c5f0;
+    --color-success: #2eb67d;
+    --color-warning: #ecb22e;
+    --color-danger: #e01e5a;
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-text-dark: #111111; /* Added darker text color */
+    --color-gray-100: #f8f9fa;
+    --color-gray-200: #e9ecef;
+    --color-gray-300: #dee2e6;
+    --color-gray-400: #ced4da;
+    --color-gray-500: #adb5bd;
+    --color-gray-600: #6c757d;
+    --color-gray-700: #495057;
+    --color-gray-800: #343a40;
+    --color-gray-900: #212529;
+    
+    /* Typography */
+    --font-headline: 'Bebas Neue', sans-serif;
+    --font-body: 'Asap', 'Roboto', sans-serif;
+    --font-alt: 'Newsreader', 'Lora', serif;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    color: var(--color-text-dark); /* Using darker text color */
+    font-size: 16px; /* Base font size */
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-headline);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--color-text-dark); /* Using darker text color */
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: var(--font-body);
+  }
+  
+  ul, ol {
+    list-style: none;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+  }

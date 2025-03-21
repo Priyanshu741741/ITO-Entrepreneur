@@ -1,0 +1,30 @@
+/* src/pages/Investing/Investing.module.css */
+.page {
+    padding: 5rem 1rem;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .pageTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--color-text-dark);
+  }
+  
+  .pageDescription {
+    font-size: 1.25rem;
+    color: var(--color-gray-600);
+    max-width: 700px;
+    margin: 0 auto 2rem;
+  }
+  
+  .comingSoon {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    font-weight: 600;
+  }

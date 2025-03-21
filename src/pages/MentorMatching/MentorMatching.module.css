@@ -1,0 +1,303 @@
+/* src/pages/MentorMatching/MentorMatching.module.css */
+.mentorMatching {
+    padding: 2rem;
+  }
+  
+  .header {
+    margin-bottom: 2rem;
+  }
+  
+  .title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--color-gray-800);
+  }
+  
+  .subtitle {
+    color: var(--color-gray-600);
+    max-width: 800px;
+  }
+  
+  .searchContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .searchBar {
+    position: relative;
+    flex-grow: 1;
+  }
+  
+  .searchIcon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-gray-500);
+  }
+  
+  .searchInput {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 2.5rem;
+    border: 1px solid var(--color-gray-300);
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .searchInput:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px rgba(97, 31, 105, 0.1);
+  }
+  
+  .filterButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray-300);
+    border-radius: 4px;
+    font-weight: 500;
+    color: var(--color-gray-700);
+  }
+  
+  .filterIcon {
+    margin-right: 0.5rem;
+  }
+  
+  .filtersContainer {
+    background-color: var(--color-gray-100);
+    border-radius: 4px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .filterTitle {
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--color-gray-800);
+  }
+  
+  .expertiseOptions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .expertiseTag {
+    padding: 0.25rem 0.75rem;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray-300);
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    color: var(--color-gray-700);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .expertiseTag:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+  }
+  
+  .selectedTag {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-color: var(--color-primary);
+  }
+  
+  .selectedTag:hover {
+    background-color: var(--color-primary-light);
+    color: var(--color-white);
+  }
+  
+  .mentorsList {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .mentorCard {
+    background-color: var(--color-white);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    position: relative;
+  }
+  
+  .matchScore {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    text-align: center;
+  }
+  
+  .scoreCircle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .scoreCircle::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    background-color: var(--color-white);
+    border-radius: 50%;
+  }
+  
+  .scoreText {
+    position: relative;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--color-primary);
+  }
+  
+  .matchLabel {
+    font-size: 0.75rem;
+    color: var(--color-gray-600);
+    margin-top: 0.25rem;
+  }
+  
+  .mentorInfo {
+    display: flex;
+    margin-bottom: 1rem;
+  }
+  
+  .mentorAvatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1rem;
+  }
+  
+  .mentorDetails {
+    flex-grow: 1;
+    padding-right: 70px; /* Space for match score */
+  }
+  
+  .mentorName {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: var(--color-gray-800);
+  }
+  
+  .mentorTitle {
+    color: var(--color-gray-600);
+    margin-bottom: 0.5rem;
+  }
+  
+  .mentorRating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    color: var(--color-gray-700);
+  }
+  
+  .starIcon {
+    color: var(--color-warning);
+    margin-right: 0.25rem;
+  }
+  
+  .mentorExpertise {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .mentorExpertise .expertiseTag {
+    font-size: 0.75rem;
+    cursor: default;
+  }
+  
+  .mentorExpertise .expertiseTag:hover {
+    border-color: var(--color-gray-300);
+    color: var(--color-gray-700);
+  }
+  
+  .mentorBio {
+    color: var(--color-gray-600);
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+  }
+  
+  .actionButtons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  
+  .scheduleButton {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .scheduleButton:hover {
+    background-color: var(--color-primary-light);
+  }
+  
+  .messageButton {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: var(--color-white);
+    color: var(--color-gray-700);
+    border: 1px solid var(--color-gray-300);
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .messageButton:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+  }
+  
+  .buttonIcon {
+    margin-right: 0.5rem;
+  }
+  
+  .noResults {
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--color-white);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    color: var(--color-gray-600);
+  }
+  
+  @media (min-width: 768px) {
+    .searchContainer {
+      flex-direction: row;
+    }
+    
+    .filterButton {
+      min-width: 120px;
+    }
+    
+    .mentorsList {
+      grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+    }
+  }

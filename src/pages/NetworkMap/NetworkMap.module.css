@@ -1,0 +1,325 @@
+/* src/pages/NetworkMap/NetworkMap.module.css */
+.networkMap {
+    padding: 2rem;
+  }
+  
+  .header {
+    margin-bottom: 2rem;
+  }
+  
+  .title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--color-gray-800);
+  }
+  
+  .subtitle {
+    color: var(--color-gray-600);
+    max-width: 800px;
+  }
+  
+  .searchFilterContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .searchBar {
+    position: relative;
+    flex-grow: 1;
+  }
+  
+  .searchIcon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-gray-500);
+  }
+  
+  .searchInput {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 2.5rem;
+    border: 1px solid var(--color-gray-300);
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .searchInput:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px rgba(97, 31, 105, 0.1);
+  }
+  
+  .filterButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray-300);
+    border-radius: 4px;
+    font-weight: 500;
+    color: var(--color-gray-700);
+  }
+  
+  .filterIcon {
+    margin-right: 0.5rem;
+  }
+  
+  .filtersContainer {
+    background-color: var(--color-gray-100);
+    border-radius: 4px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .filterGroup {
+    margin-bottom: 1rem;
+  }
+  
+  .filterGroup:last-child {
+    margin-bottom: 0;
+  }
+  
+  .filterLabel {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--color-gray-700);
+  }
+  
+  .filterOptions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .filterOption {
+    padding: 0.25rem 0.75rem;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray-300);
+    border-radius: 4px;
+    font-size: 0.875rem;
+    color: var(--color-gray-700);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .filterOption:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+  }
+  
+  .activeFilter {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-color: var(--color-primary);
+  }
+  
+  .activeFilter:hover {
+    background-color: var(--color-primary-light);
+    color: var(--color-white);
+  }
+  
+  .connectionsGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .connectionCard {
+    background-color: var(--color-white);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+  }
+  
+  .connectionHeader {
+    padding: 1.5rem;
+    position: relative;
+  }
+  
+  .avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--color-white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .connectionType {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+  
+  .typeTag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+  
+  .directTag {
+    background-color: var(--color-success);
+    color: var(--color-white);
+  }
+  
+  .secondDegreeTag {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+  }
+  
+  .recommendedTag {
+    background-color: var(--color-warning);
+    color: var(--color-white);
+  }
+  
+  .connectionInfo {
+    padding: 0 1.5rem 1.5rem;
+  }
+  
+  .name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: var(--color-gray-800);
+  }
+  
+  .title {
+    color: var(--color-gray-700);
+    margin-bottom: 1rem;
+  }
+  
+  .company,
+  .location,
+  .industry {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    color: var(--color-gray-600);
+    font-size: 0.875rem;
+  }
+  
+  .infoIcon {
+    margin-right: 0.5rem;
+    color: var(--color-gray-500);
+  }
+  
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .skillTag {
+    padding: 0.25rem 0.5rem;
+    background-color: var(--color-gray-100);
+    border-radius: 4px;
+    font-size: 0.75rem;
+    color: var(--color-gray-700);
+  }
+  
+  .connectionActions {
+    padding: 1rem 1.5rem;
+    border-top: 1px solid var(--color-gray-200);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  
+  .contactOptions {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .contactButton {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid var(--color-gray-300);
+    color: var(--color-gray-600);
+    transition: all 0.2s ease;
+  }
+  
+  .contactButton:hover {
+    background-color: var(--color-gray-100);
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+  
+  .connectButton,
+  .mutualButton {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .connectButton {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+  }
+  
+  .connectButton:hover {
+    background-color: var(--color-primary-light);
+  }
+  
+  .mutualButton {
+    background-color: var(--color-white);
+    color: var(--color-gray-700);
+    border: 1px solid var(--color-gray-300);
+  }
+  
+  .mutualButton:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+  }
+  
+  .buttonIcon {
+    margin-right: 0.5rem;
+  }
+  
+  .noResults {
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--color-white);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    color: var(--color-gray-600);
+  }
+  
+  @media (min-width: 768px) {
+    .searchFilterContainer {
+      flex-direction: row;
+    }
+    
+    .filterButton {
+      min-width: 120px;
+    }
+    
+    .connectionsGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .connectionsGrid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }

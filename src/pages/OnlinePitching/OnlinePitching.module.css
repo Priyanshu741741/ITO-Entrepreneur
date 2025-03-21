@@ -1,0 +1,949 @@
+/* src/pages/OnlinePitching/OnlinePitching.module.css */
+.onlinePitching {
+    margin-top: 80px; /* To account for the fixed header */
+  }
+  
+  .heroSection {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 4rem 1rem;
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .heroTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .heroSubtitle {
+    font-size: 1.125rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    opacity: 0.9;
+  }
+  
+  .heroActions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .primaryButton {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .primaryButton:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .primaryButton:disabled {
+    background-color: var(--color-gray-300);
+    color: var(--color-gray-500);
+    cursor: not-allowed;
+  }
+  
+  .secondaryButton {
+    padding: 0.75rem 1.5rem;
+    background-color: transparent;
+    color: var(--color-white);
+    border: 1px solid var(--color-white);
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .secondaryButton:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .buttonIcon {
+    margin-right: 0.5rem;
+  }
+  
+  .contentSection {
+    padding: 3rem 1rem;
+    background-color: var(--color-gray-100);
+    min-height: 600px;
+  }
+  
+  .tabsContainer {
+    margin-bottom: 2rem;
+  }
+  
+  .tabs {
+    display: flex;
+    border-bottom: 1px solid var(--color-gray-300);
+    margin-bottom: 1.5rem;
+    overflow-x: auto;
+  }
+  
+  .tab {
+    padding: 1rem 1.5rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    color: var(--color-gray-600);
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  
+  .tab:hover {
+    color: var(--color-primary);
+  }
+  
+  .activeTab {
+    color: var(--color-primary);
+    border-bottom-color: var(--color-primary);
+  }
+  
+  .categoryFilter {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .filterLabel {
+    font-weight: 600;
+    color: var(--color-gray-700);
+  }
+  
+  .categoryTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .categoryTag {
+    padding: 0.5rem 0.75rem;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray-300);
+    border-radius: 50px;
+    font-size: 0.875rem;
+    color: var(--color-gray-700);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .categoryTag:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+  }
+  
+  .activeTag {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-color: var(--color-primary);
+  }
+  
+  .activeTag:hover {
+    background-color: var(--color-primary-light);
+  }
+  
+  .loadingState {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 0;
+    color: var(--color-gray-600);
+  }
+  
+  .spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(97, 31, 105, 0.2);
+    border-radius: 50%;
+    border-top-color: var(--color-primary);
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .sectionTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--color-gray-800);
+  }
+  
+  /* Featured Events Styles */
+  .featuredEvents {
+    margin-bottom: 3rem;
+  }
+  
+  .featuredGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .featuredEventCard {
+    background-color: var(--color-white);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 2px solid var(--color-primary);
+  }
+  
+  .featuredEventCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .featuredBadge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+  
+  .eventHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .organizerInfo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .organizerLogo {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .organizerName {
+    font-weight: 600;
+    color: var(--color-gray-700);
+    font-size: 0.875rem;
+  }
+  
+  .categoryBadge {
+    padding: 0.25rem 0.75rem;
+    background-color: var(--color-gray-100);
+    border-radius: 50px;
+    font-size: 0.75rem;
+    color: var(--color-gray-700);
+    text-transform: capitalize;
+  }
+  
+  .eventTitle {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--color-gray-800);
+  }
+  
+  .eventDescription {
+    color: var(--color-gray-600);
+    font-size: 0.9375rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+  }
+  
+  .eventDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .eventDetail {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-gray-700);
+    font-size: 0.875rem;
+  }
+  
+  .detailIcon {
+    color: var(--color-primary);
+    font-size: 1rem;
+  }
+  
+  .eventProgress {
+    height: 6px;
+    background-color: var(--color-gray-200);
+    border-radius: 3px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+  }
+  
+  .progressBar {
+    height: 100%;
+    background-color: var(--color-primary);
+    border-radius: 3px;
+  }
+  
+  .eventActions {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .eventActions .primaryButton {
+    flex: 1;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+  }
+  
+  .eventActions .primaryButton:hover {
+    background-color: var(--color-primary-light);
+  }
+  
+  .eventActions .secondaryButton {
+    flex: 1;
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+  }
+  
+  .eventActions .secondaryButton:hover {
+    background-color: rgba(97, 31, 105, 0.05);
+  }
+  
+  /* All Events Styles */
+  .eventGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .eventCard {
+    background-color: var(--color-white);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .eventCard:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Past Pitches Styles */
+  .pitchGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .pitchCard {
+    background-color: var(--color-white);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .pitchCard:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .pitchThumbnail {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+  }
+  
+  .thumbnailImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .pitchCard:hover .thumbnailImage {
+    transform: scale(1.05);
+  }
+  
+  .playOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .pitchCard:hover .playOverlay {
+    opacity: 1;
+  }
+  
+  .playIcon {
+    color: var(--color-white);
+    font-size: 3rem;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  }
+  
+  .duration {
+    position: absolute;
+    bottom: 0.75rem;
+    right: 0.75rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: var(--color-white);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+  }
+  
+  .pitchContent {
+    padding: 1.5rem;
+  }
+  
+  .companyInfo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+  }
+  
+  .companyLogo {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+  }
+  
+  .companyName {
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: var(--color-gray-700);
+    margin-right: auto;
+  }
+  
+  .pitchTitle {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--color-gray-800);
+  }
+  
+  .presenterInfo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .presenterAvatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    margin-right: 0.75rem;
+  }
+  
+  .presenterDetails {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .presenterName {
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: var(--color-gray-800);
+  }
+  
+  .presenterTitle {
+    font-size: 0.75rem;
+    color: var(--color-gray-600);
+  }
+  
+  .pitchStats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-gray-200);
+    margin-bottom: 1rem;
+  }
+  
+  .statItem {
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+    color: var(--color-gray-600);
+  }
+  
+  .statValue {
+    font-weight: 600;
+    margin-right: 0.25rem;
+  }
+  
+  .statDate {
+    font-size: 0.75rem;
+  }
+  
+  .ratingStars {
+    display: flex;
+    align-items: center;
+  }
+  
+  .starIcon {
+    color: var(--color-warning);
+    margin-right: 0.125rem;
+  }
+  
+  .starHalfIcon {
+    color: var(--color-warning);
+    position: relative;
+    margin-right: 0.125rem;
+  }
+  
+  .starEmptyIcon {
+    color: var(--color-gray-300);
+    margin-right: 0.125rem;
+  }
+  
+  .ratingValue {
+    margin-left: 0.25rem;
+    font-weight: 600;
+  }
+  
+  .watchButton {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+  }
+  
+  .watchButton:hover {
+    background-color: var(--color-primary-light);
+  }
+  
+  /* My Pitches Styles */
+  .myPitchesHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .schedulePitchButton {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+  }
+  
+  .schedulePitchButton:hover {
+    background-color: var(--color-primary-light);
+  }
+  
+  .myPitchesGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .myPitchCard {
+    background-color: var(--color-white);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .myPitchCard:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .pitchHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .pitchDate {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--color-gray-600);
+  }
+  
+  .pitchDescription {
+    color: var(--color-gray-600);
+    font-size: 0.9375rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+  }
+  
+  .pitchDetails {
+    background-color: var(--color-gray-100);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .detailItem {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+  }
+  
+  .detailItem:last-child {
+    margin-bottom: 0;
+  }
+  
+  .detailLabel {
+    font-weight: 600;
+    color: var(--color-gray-700);
+  }
+  
+  .pitchActions {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .pitchActions .primaryButton,
+  .pitchActions .secondaryButton {
+    flex: 1;
+  }
+  
+  .pitchActions .primaryButton {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+  }
+  
+  .pitchActions .primaryButton:hover {
+    background-color: var(--color-primary-light);
+  }
+  
+  .pitchActions .secondaryButton {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+  }
+  
+  .pitchActions .secondaryButton:hover {
+    background-color: rgba(97, 31, 105, 0.05);
+  }
+  
+  .emptyState {
+    text-align: center;
+    padding: 4rem 0;
+    color: var(--color-gray-600);
+  }
+  
+  .emptyState h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-gray-800);
+  }
+  
+  .emptyState p {
+    margin-bottom: 1.5rem;
+  }
+  
+  .resetButton {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .resetButton:hover {
+    background-color: rgba(97, 31, 105, 0.05);
+  }
+  
+  .emptyPitchState {
+    text-align: center;
+    padding: 3rem;
+    background-color: var(--color-white);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .emptyStateIcon {
+    font-size: 3rem;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+  }
+  
+  .emptyPitchState h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--color-gray-800);
+  }
+  
+  .emptyPitchState p {
+    color: var(--color-gray-600);
+    margin-bottom: 1.5rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Modal Styles */
+  .modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 1rem;
+  }
+  
+  .modal {
+    background-color: var(--color-white);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 700px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  .modalHeader {
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--color-gray-200);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .modalHeader h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-gray-800);
+  }
+  
+  .closeButton {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--color-gray-500);
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+  
+  .closeButton:hover {
+    color: var(--color-gray-800);
+  }
+  
+  .modalBody {
+    padding: 1.5rem;
+  }
+  
+  .pitchForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .formGroup label {
+    font-weight: 600;
+    color: var(--color-gray-700);
+  }
+  
+  .formGroup input,
+  .formGroup select,
+  .formGroup textarea {
+    padding: 0.75rem;
+    border: 1px solid var(--color-gray-300);
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+  }
+  
+  .formGroup input:focus,
+  .formGroup select:focus,
+  .formGroup textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px rgba(97, 31, 105, 0.1);
+  }
+  
+  .formRow {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .dateTimeInputs {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  
+  .fileUploadContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .fileUpload {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .radioGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .radioOption {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .radioOption input[type="radio"] {
+    margin-top: 0.25rem;
+  }
+  
+  .modalActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .modalActions .primaryButton,
+  .modalActions .secondaryButton {
+    min-width: 120px;
+  }
+  
+  .modalActions .primaryButton {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+  }
+  
+  .modalActions .primaryButton:hover {
+    background-color: var(--color-primary-light);
+  }
+  
+  .modalActions .secondaryButton {
+    background-color: var(--color-white);
+    color: var(--color-gray-700);
+    border: 1px solid var(--color-gray-300);
+  }
+  
+  .modalActions .secondaryButton:hover {
+    background-color: var(--color-gray-100);
+  }
+  
+  /* Responsive Styles */
+  @media (min-width: 640px) {
+    .heroActions {
+      flex-direction: row;
+      justify-content: center;
+    }
+    
+    .formRow {
+      grid-template-columns: 1fr 1fr;
+    }
+    
+    .dateTimeInputs {
+      grid-template-columns: 1fr 1fr;
+    }
+    
+    .fileUploadContainer {
+      flex-direction: row;
+    }
+    
+    .fileUpload {
+      flex: 1;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .eventGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .pitchGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .myPitchesGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .featuredGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .eventGrid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .pitchGrid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }

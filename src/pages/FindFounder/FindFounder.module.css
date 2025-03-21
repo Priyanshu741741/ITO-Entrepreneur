@@ -1,0 +1,534 @@
+/* src/pages/FindFounder/FindFounder.module.css */
+.findFounder {
+    margin-top: 80px; /* To account for the fixed header */
+  }
+  
+  .heroSection {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 4rem 1rem;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .heroTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .heroSubtitle {
+    font-size: 1.125rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    text-align: center;
+    opacity: 0.9;
+  }
+  
+  .searchContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .searchBar {
+    position: relative;
+    flex-grow: 1;
+  }
+  
+  .searchIcon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-gray-500);
+  }
+  
+  .searchInput {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .filterButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: var(--color-white);
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    color: var(--color-primary);
+    position: relative;
+  }
+  
+  /* src/pages/FindFounder/FindFounder.module.css (continued) */
+.filterIcon {
+    margin-right: 0.5rem;
+  }
+  
+  .filterCount {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    font-size: 0.75rem;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .filtersSection {
+    background-color: var(--color-gray-100);
+    padding: 1.5rem 1rem;
+    border-bottom: 1px solid var(--color-gray-200);
+  }
+  
+  .filtersContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .filterGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .filterGroupTitle {
+    font-weight: 600;
+    color: var(--color-gray-800);
+  }
+  
+  .filterOptions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .filterTag {
+    padding: 0.5rem 1rem;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray-300);
+    border-radius: 50px;
+    font-size: 0.875rem;
+    color: var(--color-gray-700);
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .filterTag:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+  }
+  
+  .activeTag {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-color: var(--color-primary);
+  }
+  
+  .activeTag:hover {
+    background-color: var(--color-primary-light);
+    color: var(--color-white);
+  }
+  
+  .resetButton {
+    align-self: flex-start;
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    border: 1px solid var(--color-gray-400);
+    border-radius: 4px;
+    color: var(--color-gray-700);
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .resetButton:hover {
+    background-color: var(--color-gray-200);
+  }
+  
+  .foundersSection {
+    padding: 3rem 1rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--color-gray-800);
+  }
+  
+  .founderGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .founderCard {
+    background-color: var(--color-white);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+  }
+  
+  .founderCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .featuredCard {
+    border: 2px solid var(--color-primary);
+  }
+  
+  .featuredBadge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    z-index: 1;
+  }
+  
+  .matchPercentage {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+  }
+  
+  .matchCircle {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0.25rem;
+  }
+  
+  .matchCircleSvg {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .matchCircleBackground {
+    fill: none;
+    stroke: var(--color-gray-200);
+    stroke-width: 3;
+  }
+  
+  .matchCircleValue {
+    fill: none;
+    stroke: var(--color-primary);
+    stroke-width: 3;
+    stroke-linecap: round;
+    transform: rotate(90deg);
+    transform-origin: center;
+  }
+  
+  .matchText {
+    font-size: 10px;
+    fill: var(--color-primary);
+    font-weight: bold;
+    text-anchor: middle;
+    dominant-baseline: middle;
+  }
+  
+  .matchLabel {
+    font-size: 0.75rem;
+    color: var(--color-gray-600);
+  }
+  
+  .founderHeader {
+    position: relative;
+    padding: 2rem;
+    background-color: var(--color-gray-100);
+    text-align: center;
+  }
+  
+  .founderAvatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--color-white);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .founderInfo {
+    padding: 1.5rem;
+  }
+  
+  .founderName {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    color: var(--color-gray-800);
+  }
+  
+  .founderTitle {
+    font-size: 1rem;
+    color: var(--color-gray-700);
+    margin-bottom: 1rem;
+  }
+  
+  .founderLocation {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: var(--color-gray-700);
+    font-size: 0.875rem;
+  }
+  
+  .infoIcon {
+    margin-right: 0.5rem;
+    color: var(--color-gray-500);
+  }
+  
+  .founderLookingFor,
+  .founderSkills,
+  .founderInterests {
+    margin-bottom: 1rem;
+  }
+  
+  .infoLabel {
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--color-gray-800);
+  }
+  
+  .lookingForTags,
+  .skillTags,
+  .interestTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .lookingForTag,
+  .skillTag,
+  .interestTag,
+  .moreTag {
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+  }
+  
+  .lookingForTag {
+    background-color: rgba(97, 31, 105, 0.1);
+    color: var(--color-primary);
+  }
+  
+  .skillTag {
+    background-color: rgba(54, 197, 240, 0.1);
+    color: var(--color-accent);
+  }
+  
+  .interestTag {
+    background-color: rgba(46, 182, 125, 0.1);
+    color: var(--color-success);
+  }
+  
+  .moreTag {
+    background-color: var(--color-gray-200);
+    color: var(--color-gray-700);
+  }
+  
+  .founderExperience {
+    margin-bottom: 1rem;
+  }
+  
+  .experienceItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    color: var(--color-gray-700);
+    font-size: 0.875rem;
+  }
+  
+  .founderBio {
+    margin-bottom: 1.5rem;
+    color: var(--color-gray-700);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+  }
+  
+  .founderMeta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+  }
+  
+  .founderAvailability,
+  .founderCommitment {
+    display: flex;
+    align-items: center;
+    color: var(--color-gray-700);
+  }
+  
+  .availabilityLabel,
+  .commitmentLabel {
+    font-weight: 600;
+    margin-right: 0.5rem;
+  }
+  
+  .founderSocial {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .socialLink {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--color-gray-100);
+    color: var(--color-gray-700);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+  }
+  
+  .socialLink:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    transform: translateY(-2px);
+  }
+  
+  .founderActions {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .primaryButton {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .primaryButton:hover {
+    background-color: var(--color-primary-light);
+  }
+  
+  .secondaryButton {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .secondaryButton:hover {
+    background-color: rgba(97, 31, 105, 0.05);
+  }
+  
+  .loadingState {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 0;
+    color: var(--color-gray-600);
+  }
+  
+  .spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(97, 31, 105, 0.2);
+    border-radius: 50%;
+    border-top-color: var(--color-primary);
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .emptyState {
+    text-align: center;
+    padding: 4rem 0;
+    color: var(--color-gray-600);
+  }
+  
+  .emptyState h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-gray-800);
+  }
+  
+  .emptyState p {
+    margin-bottom: 1.5rem;
+  }
+  
+  .featuredFounders {
+    margin-bottom: 4rem;
+  }
+  
+  @media (min-width: 768px) {
+    .searchContainer {
+      flex-direction: row;
+    }
+    
+    .filterButton {
+      min-width: 120px;
+    }
+    
+    .filtersContent {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    
+    .resetButton {
+      align-self: flex-end;
+    }
+    
+    .founderGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .founderGrid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }

@@ -1,0 +1,187 @@
+/* src/pages/Dashboard/Dashboard.module.css */
+.dashboard {
+    padding: 2rem;
+  }
+  
+  .pageTitle {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--color-gray-800);
+  }
+  
+  .statsGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .statCard {
+    background-color: var(--color-white);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+  }
+  
+  .statIconWrapper {
+    background-color: rgba(97, 31, 105, 0.1);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+  }
+  
+  .statIcon {
+    color: var(--color-primary);
+    font-size: 1.25rem;
+  }
+  
+  .statInfo {
+    flex-grow: 1;
+  }
+  
+  .statValue {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    color: var(--color-gray-800);
+  }
+  
+  .statLabel {
+    color: var(--color-gray-600);
+  }
+  
+  .dashboardGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .dashboardCard {
+    background-color: var(--color-white);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+  }
+  
+  .cardHeader {
+    padding: 1rem;
+    border-bottom: 1px solid var(--color-gray-200);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .cardTitle {
+    font-weight: 600;
+    font-size: 1.125rem;
+    color: var(--color-gray-800);
+    display: flex;
+    align-items: center;
+  }
+  
+  .cardTitleIcon {
+    color: var(--color-primary);
+    margin-right: 0.5rem;
+  }
+  
+  .viewAllLink {
+    color: var(--color-primary);
+    font-size: 0.875rem;
+    cursor: pointer;
+  }
+  
+  .viewAllLink:hover {
+    text-decoration: underline;
+  }
+  
+  .cardContent {
+    padding: 1rem;
+  }
+  
+  .notificationItem {
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--color-gray-200);
+  }
+  
+  .notificationItem:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  
+  .notificationTitle {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: var(--color-gray-800);
+  }
+  
+  .notificationMessage {
+    color: var(--color-gray-600);
+    margin-bottom: 0.5rem;
+  }
+  
+  .notificationTime {
+    font-size: 0.75rem;
+    color: var(--color-gray-500);
+  }
+  
+  .meetingItem {
+    display: flex;
+    align-items: center;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--color-gray-200);
+  }
+  
+  .meetingItem:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  
+  .meetingAvatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 1rem;
+  }
+  
+  .meetingAvatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .meetingInfo {
+    flex-grow: 1;
+  }
+  
+  .meetingTitle {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: var(--color-gray-800);
+  }
+  
+  .meetingTime {
+    font-size: 0.875rem;
+    color: var(--color-gray-600);
+  }
+  
+  @media (min-width: 768px) {
+    .statsGrid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .dashboardGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }

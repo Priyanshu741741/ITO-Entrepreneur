@@ -1,0 +1,25 @@
+/* src/components/common/Logo/Logo.module.css */
+.logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logoImage {
+    height: 42px; /* Increased from 32px */
+    width: auto;
+    filter: brightness(0) invert(1); /* Make the logo white */
+  }
+
+  .logoText {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+  }
+
+  .logoTextMain {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: white;
+    letter-spacing: -0.5px;
+    font-family: var(--font-headline, 'Poppins', sans-serif);
+  }
