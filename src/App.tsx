@@ -14,20 +14,25 @@ import Chatbot from './pages/Chatbot/Chatbot';
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Layout><Home /></Layout>} />
-        <Route path="/dashboard" element={<Layout><Dashboard /></Layout>} />
-        <Route path="/find-mentor" element={<Layout><FindMentor /></Layout>} />
-        <Route path="/find-founder" element={<Layout><FindFounder /></Layout>} />
-        <Route path="/online-pitching" element={<Layout><OnlinePitching /></Layout>} />
-        <Route path="/startup-ideas" element={<Layout><StartupIdeas /></Layout>} />
-        <Route path="/forum" element={<Layout><Forum /></Layout>} />
-        <Route path="/chatbot" element={<Layout><Chatbot /></Layout>} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-      </Routes>
-    </Router>
+    <div style={{ padding: "20px", textAlign: "center", marginTop: "100px" }}>
+      <h1>TEST DISPLAY - ITO APP</h1>
+      <p>If you can see this, rendering is working!</p>
+      
+      <Router>
+        <Routes>
+          <Route path="/" element={<Layout><Home /></Layout>} />
+          <Route path="/dashboard" element={<Layout><Dashboard /></Layout>} />
+          <Route path="/find-mentor" element={<Layout><FindMentor /></Layout>} />
+          <Route path="/find-founder" element={<Layout><FindFounder /></Layout>} />
+          <Route path="/online-pitching" element={<Layout><OnlinePitching /></Layout>} />
+          <Route path="/startup-ideas" element={<Layout><StartupIdeas /></Layout>} />
+          <Route path="/forum" element={<Layout><Forum /></Layout>} />
+          <Route path="/chatbot" element={<Layout><Chatbot /></Layout>} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+        </Routes>
+      </Router>
+    </div>
   );
 }
 
